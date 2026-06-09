@@ -7,6 +7,7 @@ import com.example.Feelia.domain.repository.NoteRepository
 import com.example.Feelia.domain.repository.WritingStyle
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import com.example.Feelia.domain.model.EmotionResult
 
 // validasi save note, logic sorting, search/filter berdasarkan emotion dan update business rules journaling
 class GetAllNotesUseCase(private val repository: NoteRepository) {
@@ -112,5 +113,13 @@ class DetectEmotionUseCase(private val aiRepository: AIRepository) {
 class GetEmotionInsightUseCase(private val aiRepository: AIRepository) {
     suspend operator fun invoke(content: String, emotion: Emotion): Result<String> {
         return aiRepository.getEmotionInsight(content, emotion.displayName)
+    }
+}
+
+class DetectEmotionWithInsightUseCase(private val aiRepository: AIRepository) {
+    suspend operator fun invoke(content: String): Result<EmotionResult> {
+        if (content.trim().length < 5)
+            return Result.failure(IllegalArgumentException("Teks terlalu pendek"))
+        return aiRepository.detectEmotionWithInsight(content)
     }
 }

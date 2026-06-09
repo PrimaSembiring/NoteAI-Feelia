@@ -32,6 +32,7 @@ import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.bind
 import org.koin.dsl.module
+import com.example.Feelia.domain.usecase.DetectEmotionWithInsightUseCase
 
 // ==================== NETWORK MODULE ====================
 
@@ -75,6 +76,7 @@ val useCaseModule = module {
     singleOf(::GenerateIdeasUseCase)
     singleOf(::DetectEmotionUseCase)
     singleOf(::GetEmotionInsightUseCase)
+    singleOf(::DetectEmotionWithInsightUseCase)
 }
 
 // ==================== VIEWMODEL MODULE ====================
