@@ -31,7 +31,8 @@ fun AppNavHost(
                 onNavigateToAddNote = { navigationActions.navigateToAddNote() },
                 onNavigateToDetail = { noteId -> navigationActions.navigateToNoteDetail(noteId) },
                 onNavigateToAI = { navigationActions.navigateToAIAssistant() },
-                onNavigateToSettings = { navigationActions.navigateToSettings() }
+                onNavigateToSettings = { navigationActions.navigateToSettings() },
+                onNavigateToAnalytics = { navigationActions.navigateToAnalytics() }
             )
         }
 
