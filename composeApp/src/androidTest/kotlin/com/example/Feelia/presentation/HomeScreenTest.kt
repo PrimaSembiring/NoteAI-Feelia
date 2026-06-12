@@ -18,6 +18,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import kotlin.test.assertTrue
 
+// Tambahan
 @RunWith(AndroidJUnit4::class)
 class HomeScreenTest {
 
