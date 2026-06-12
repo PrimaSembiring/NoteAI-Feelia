@@ -11,7 +11,8 @@ Program Studi Teknik Informatika Institut Teknologi Sumatera (ITERA)
 | 123140119 |Prima Agusta Sembering |
 | 123140127 |Muhammad Daffansyah Desuandi|
 
-
+## Demo Aplikasi
+[Klik Video Demo](https://youtu.be/8JoY_hdxS-Y)
 ## Tentang Aplikasi
 
 Feelia adalah aplikasi jurnal harian berbasis AI yang membantu pengguna mencatat perasaan, memahami kondisi emosional, dan memantau tren mood dari waktu ke waktu.  
